@@ -11,15 +11,15 @@ public class LeftWall : MonoBehaviour
             float cameraHalfHeight = camera.orthographicSize;
             float cameraHalfWidth = cameraHalfHeight * camera.aspect;
 
-            transform.position = new Vector3(cameraHalfWidth, 0f, 0f);
+            transform.position = new Vector3(-1f * cameraHalfWidth, 0f, 0f);
 
             BoxCollider2D col = GetComponent<BoxCollider2D>();
             if (col != null)
             {
                 float cameraHeight = cameraHalfHeight * 2;
-                float colHeight = col.size.x;
+                float colHeight = col.size.y;
 
-                transform.localScale = new Vector3(1f, cameraHeight / colHeight, 1f);
+                col.size= new Vector2(1f, cameraHeight / colHeight);
             }
         }
     }

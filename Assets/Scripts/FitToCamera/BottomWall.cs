@@ -18,7 +18,7 @@ public class BottomWall : MonoBehaviour
                 float cameraWidth = cameraHalfHeight * 2 * camera.aspect;
                 float colWidth = col.size.x;
 
-                transform.localScale = new Vector3(cameraWidth / colWidth, 1f, 1f);
+                col.size = new Vector2(cameraWidth / colWidth, 1f);
             }
         }
     }

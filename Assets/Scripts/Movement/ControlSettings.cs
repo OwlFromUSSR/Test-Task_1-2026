@@ -2,7 +2,7 @@ using UnityEngine;
 
 public enum ControlStyle { Keyboard, Joystick, Gyro}
 
-public class ControlSettings
+public static class ControlSettings
 {
     const string Key = "ControlStyle";
     

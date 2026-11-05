@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
 
     private float boostMultiplier = 1f;
     private float boostTimerLeft;
+    public bool IsActiveBoost => boostTimerLeft > 0;
+    public float ReaminingBoostTime => boostTimerLeft;
     public float CurrentSpeed => baseSpeed * (boostTimerLeft > 0 ? boostMultiplier : 1f);
 
 
